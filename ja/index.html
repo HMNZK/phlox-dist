@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phlox — AIコーディングエージェントを束ねて動かす</title>
+  <meta name="description" content="Phlox は Codex・Cursor・Claude Code を1つのネイティブ macOS コックピットで並列に動かします。セッションを spawn し、タスクを委譲し、結果を統合する — すべて1画面で。" />
+  <meta property="og:title" content="Phlox — AIコーディングエージェントを束ねて動かす" />
+  <meta property="og:description" content="Codex・Cursor・Claude Code を Mac 上で並列に。spawn し、委譲し、統合する。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://phlox.cc/ja/" />
+  <meta property="og:image" content="https://phlox.cc/assets/icon.png" />
+  <link rel="icon" href="../assets/icon.png" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/ja/"><img src="../assets/icon.png" alt="Phlox" />Phlox</a>
+      <div class="nav-right">
+        <a href="#features">特徴</a>
+        <a href="https://github.com/HMNZK/Phlox" target="_blank" rel="noopener">GitHub</a>
+        <span class="lang">
+          <a href="/">EN</a>
+          <a href="/ja/" class="active">日本語</a>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img class="app-icon" src="../assets/icon.png" alt="Phlox アプリアイコン" />
+        <h1>AIコーディングエージェントを、<br />束ねて動かす。</h1>
+        <p class="sub">Phlox は Codex・Cursor・Claude Code を1つのネイティブ macOS コックピットで並列に動かします。セッションを spawn し、タスクを委譲し、結果を統合する — すべて1画面で。</p>
+        <div class="cta">
+          <a class="btn-primary" href="https://github.com/HMNZK/Phlox/releases/latest/download/Phlox.dmg">macOS版をダウンロード</a>
+        </div>
+        <div class="req">macOS 14 Sonoma 以降 · Apple Silicon · 署名・公証済み</div>
+      </div>
+    </section>
+
+    <section class="container shot">
+      <div class="shot-frame">
+        <!-- TODO: assets/screenshot.png(実機キャプチャ)に差し替え -->
+        <div class="shot-placeholder">アプリのスクリーンショット</div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <h2>コピペではない、本物のオーケストレーション。</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="ic">🪟</div>
+            <h3>1画面に、複数のエージェント</h3>
+            <p>各エージェントが専用のターミナルペインで動作。Codex・Cursor・Claude Code が並列で働く様子を、タブを行き来せずそのまま見られます。</p>
+          </div>
+          <div class="card">
+            <div class="ic">⚡</div>
+            <h3>委譲して、待つ</h3>
+            <p>セッションを spawn し、指示を送り、完了を待つ — 完了は Stop フックで自動検知 — そして結果を統合します。</p>
+          </div>
+          <div class="card">
+            <div class="ic">💬</div>
+            <h3>エージェント同士が会話する</h3>
+            <p>セッション間メッセージングで作業を引き継ぎ、文脈を共有。複数エージェントが1つのタスクで協調します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <span>© 2026 Phlox</span>
+      <span>
+        <a href="https://github.com/HMNZK/Phlox" target="_blank" rel="noopener">GitHub</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

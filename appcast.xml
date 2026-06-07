@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Phlox</title>
+        <item>
+            <title>0.1.0</title>
+            <pubDate>Sun, 07 Jun 2026 16:59:43 +0900</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://github.com/HMNZK/phlox-dist/releases/download/updates/Phlox-0.1.0.zip" length="4713930" type="application/octet-stream" sparkle:edSignature="loOb2l/cKvgr4q3rY06rSML5ImV+GjAF2m7mswukKp0yH/BqjhM82T2oIKXmKaaDvNSpk9Nz+1ejdsKps6TpAA=="/>
+        </item>
+    </channel>
+</rss>
