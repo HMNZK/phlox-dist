@@ -49,27 +49,79 @@
 
     <section class="features" id="features">
       <div class="container">
-        <h2>コピペではない、本物のオーケストレーション。</h2>
-        <div class="grid">
-          <div class="card">
-            <div class="ic">🪟</div>
-            <h3>1画面に、複数のエージェント</h3>
-            <p>各エージェントが専用のターミナルペインで動作。Codex・Cursor・Claude Code が並列で働く様子を、タブを行き来せずそのまま見られます。</p>
-          </div>
-          <div class="card">
-            <div class="ic">⚡</div>
+        <div class="head">
+          <span class="eyebrow">Features</span>
+          <h2>コピペではない、本物のオーケストレーション。</h2>
+          <p class="lead">Mac 上のすべてのコーディングエージェントを、1つのネイティブ・コックピットに。spawn し、見守り、協調させる。</p>
+        </div>
+
+        <div class="bento">
+          <article class="feat feat-a">
+            <span class="k">01 — Parallel</span>
+            <h3>1画面に、すべてのエージェント</h3>
+            <p>Codex・Cursor・Claude Code が、それぞれ専用のライブ・ターミナルペインで並列に動作。タブを行き来せず、アプリ間で文脈を失うこともありません。</p>
+            <div class="panes">
+              <span class="pane"><span class="dot run"></span>Claude Code</span>
+              <span class="pane"><span class="dot wait"></span>Codex</span>
+              <span class="pane"><span class="dot idle"></span>Cursor</span>
+            </div>
+          </article>
+
+          <article class="feat feat-usage">
+            <span class="k">Live</span>
+            <h3>使用量を、ひと目で</h3>
+            <p>各エージェントのクォータを Inspector に。5時間・週次・合計の上限で。</p>
+            <div class="usage">
+              <div class="ubar"><div class="ul"><span>Claude Code · 5h</span><b>51%</b></div><div class="track"><div class="fill" style="--w:51%"></div></div></div>
+              <div class="ubar"><div class="ul"><span>Codex · 週次</span><b>63%</b></div><div class="track"><div class="fill" style="--w:63%"></div></div></div>
+              <div class="ubar"><div class="ul"><span>Cursor · 合計</span><b>16%</b></div><div class="track"><div class="fill" style="--w:16%"></div></div></div>
+            </div>
+          </article>
+
+          <article class="feat feat-c">
+            <span class="k">02 — Delegate</span>
             <h3>委譲して、待つ</h3>
-            <p>セッションを spawn し、指示を送り、完了を待つ — 完了は Stop フックで自動検知 — そして結果を統合します。</p>
-          </div>
-          <div class="card">
-            <div class="ic">💬</div>
+            <p>セッションを spawn して指示を送ったら、あとは任せるだけ。完了は Stop フックで自動検知し、結果を統合します。</p>
+          </article>
+
+          <article class="feat feat-d">
+            <span class="k">03 — Handoff</span>
             <h3>エージェント同士が会話する</h3>
             <p>セッション間メッセージングで作業を引き継ぎ、文脈を共有。複数エージェントが1つのタスクで協調します。</p>
-          </div>
+          </article>
+
+          <article class="feat feat-e">
+            <span class="k">04 — Status</span>
+            <h3>信頼できるステータス</h3>
+            <p>実行中・待機・入力待ちを自動検知（Codex のプロンプト待ちも含む）。通知とプラン承認プロンプトで、見えないまま止まることがありません。</p>
+          </article>
+
+          <article class="feat feat-f">
+            <span class="k">05 — Layout</span>
+            <h3>ワークスペースとレイアウト</h3>
+            <p>ワークスペースでセッションをまとめ、グリッドを絞り込み、表示モードを切替（⌃⌘G）、サイドバーをトグル（⌘B）。あなたの思うままのコックピットに。</p>
+          </article>
         </div>
       </div>
     </section>
   </main>
+
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      var els = document.querySelectorAll('.feat');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.18 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
 
   <footer>
     <div class="container foot">

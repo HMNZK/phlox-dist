@@ -49,27 +49,79 @@
 
     <section class="features" id="features">
       <div class="container">
-        <h2>Real orchestration, not copy-paste.</h2>
-        <div class="grid">
-          <div class="card">
-            <div class="ic">🪟</div>
-            <h3>One window, many agents</h3>
-            <p>Each agent runs in its own terminal pane. Watch Codex, Cursor, and Claude Code work in parallel — without juggling tabs.</p>
-          </div>
-          <div class="card">
-            <div class="ic">⚡</div>
+        <div class="head">
+          <span class="eyebrow">Features</span>
+          <h2>Real orchestration, not copy-paste.</h2>
+          <p class="lead">One native cockpit for every coding agent on your Mac — spawn them, watch them, and let them work together.</p>
+        </div>
+
+        <div class="bento">
+          <article class="feat feat-a">
+            <span class="k">01 — Parallel</span>
+            <h3>One window, every agent</h3>
+            <p>Codex, Cursor, and Claude Code each run in their own live terminal pane — side by side, in parallel. No tab-juggling, no context lost between apps.</p>
+            <div class="panes">
+              <span class="pane"><span class="dot run"></span>Claude Code</span>
+              <span class="pane"><span class="dot wait"></span>Codex</span>
+              <span class="pane"><span class="dot idle"></span>Cursor</span>
+            </div>
+          </article>
+
+          <article class="feat feat-usage">
+            <span class="k">Live</span>
+            <h3>Usage at a glance</h3>
+            <p>Every agent's quota in the Inspector — across 5-hour, weekly, and total limits.</p>
+            <div class="usage">
+              <div class="ubar"><div class="ul"><span>Claude Code · 5h</span><b>51%</b></div><div class="track"><div class="fill" style="--w:51%"></div></div></div>
+              <div class="ubar"><div class="ul"><span>Codex · weekly</span><b>63%</b></div><div class="track"><div class="fill" style="--w:63%"></div></div></div>
+              <div class="ubar"><div class="ul"><span>Cursor · total</span><b>16%</b></div><div class="track"><div class="fill" style="--w:16%"></div></div></div>
+            </div>
+          </article>
+
+          <article class="feat feat-c">
+            <span class="k">02 — Delegate</span>
             <h3>Delegate and wait</h3>
-            <p>Spawn a session, send instructions, then wait for completion — detected automatically via Stop hooks — and integrate the result.</p>
-          </div>
-          <div class="card">
-            <div class="ic">💬</div>
+            <p>Spawn a session, send the brief, and let it run. Completion is detected automatically via Stop hooks — then you integrate the result.</p>
+          </article>
+
+          <article class="feat feat-d">
+            <span class="k">03 — Handoff</span>
             <h3>Agents that talk</h3>
-            <p>Built-in messaging lets sessions hand off work and share context, so a fleet of agents can collaborate on one task.</p>
-          </div>
+            <p>Built-in messaging lets sessions hand off work and share context, so a fleet of agents collaborates on one task.</p>
+          </article>
+
+          <article class="feat feat-e">
+            <span class="k">04 — Status</span>
+            <h3>Status you can trust</h3>
+            <p>Running, idle, or waiting for input — detected automatically, including Codex prompt-waits — with notifications and plan-approval prompts so nothing stalls unseen.</p>
+          </article>
+
+          <article class="feat feat-f">
+            <span class="k">05 — Layout</span>
+            <h3>Workspaces &amp; layouts</h3>
+            <p>Group sessions by workspace, filter the grid, switch view modes (⌃⌘G), and toggle the sidebar (⌘B). Your cockpit, your way.</p>
+          </article>
         </div>
       </div>
     </section>
   </main>
+
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      var els = document.querySelectorAll('.feat');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.18 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
 
   <footer>
     <div class="container foot">
