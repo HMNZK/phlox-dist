@@ -91,15 +91,54 @@ header {
 .req { margin-top: 14px; font-size: 14px; color: var(--muted); }
 
 /* ---- Shot ---- */
-.shot { margin: 8px auto 0; max-width: 920px; }
+.shot { margin: 26px auto 0; max-width: 920px; position: relative; perspective: 1600px; }
+/* colored aura glowing behind the window */
+.shot::before {
+  content: "";
+  position: absolute; z-index: 0;
+  left: 50%; top: 5%; transform: translateX(-50%);
+  width: 84%; height: 88%;
+  background: radial-gradient(50% 50% at 50% 45%, rgba(168, 85, 247, 0.42), rgba(236, 72, 153, 0.16) 48%, transparent 72%);
+  filter: blur(48px);
+  pointer-events: none;
+}
 .shot-frame {
+  position: relative; z-index: 1;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--bg-soft);
-  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.05) inset,
+    0 44px 110px -20px rgba(0, 0, 0, 0.72),
+    0 22px 60px -34px rgba(168, 85, 247, 0.55);
+  transform-style: preserve-3d;
+  animation: shotIn 1.2s cubic-bezier(.2, .7, .2, 1) both,
+             shotFloat 9s ease-in-out 1.3s infinite;
+}
+/* gradient hairline edge */
+.shot-frame::after {
+  content: ""; position: absolute; inset: 0; z-index: 3; border-radius: inherit;
+  padding: 1px; pointer-events: none;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.85), rgba(236, 72, 153, 0.55) 45%, transparent 78%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+}
+/* top glass sheen */
+.shot-frame::before {
+  content: ""; position: absolute; inset: 0; z-index: 2; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.10), transparent 14%);
 }
 .shot-frame img { display: block; width: 100%; height: auto; }
+
+@keyframes shotIn {
+  from { opacity: 0; transform: rotateX(9deg) translateY(46px) scale(.965); }
+  to   { opacity: 1; transform: rotateX(0) translateY(0) scale(1); }
+}
+@keyframes shotFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-9px); }
+}
 .shot-placeholder {
   aspect-ratio: 16 / 10;
   display: flex; align-items: center; justify-content: center;
@@ -220,4 +259,5 @@ footer {
   .js .feat { opacity: 1; transform: none; }
   .js .fill { width: var(--w); transition: none; }
   .feat:hover { transform: none; }
+  .shot-frame { animation: none; opacity: 1; transform: none; }
 }
