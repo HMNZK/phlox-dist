@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phlox — Orchestrate your AI coding agents</title>
-  <meta name="description" content="Phlox runs Codex, Cursor, and Claude Code side by side in one native macOS cockpit. Spawn sessions, delegate tasks, and gather the results — all from a single window." />
-  <meta property="og:title" content="Phlox — Orchestrate your AI coding agents" />
-  <meta property="og:description" content="Run Codex, Cursor, and Claude Code in parallel on your Mac. Spawn, delegate, integrate." />
+  <title>Phlox — Ask one agent. It runs the rest.</title>
+  <meta name="description" content="Hand a task to a single AI, and it calls in the others — instructing them, waiting on them, and wrapping up when they're done. Claude Code, Codex, and Cursor, in one Mac app." />
+  <meta property="og:title" content="Phlox — Ask one agent. It runs the rest." />
+  <meta property="og:description" content="Hand a task to one AI and it calls in the others to get it done. No more opening window after window." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://phlox.cc/" />
   <meta property="og:image" content="https://phlox.cc/assets/icon.png" />
@@ -18,7 +18,8 @@
     <div class="container nav">
       <a class="brand" href="/"><img src="assets/icon.png" alt="Phlox" />Phlox</a>
       <div class="nav-right">
-        <a href="#features">Features</a>
+        <a href="#features">What you can do</a>
+        <a href="#start">Get started</a>
         <span class="lang">
           <a href="/" class="active">EN</a>
           <a href="/ja/">日本語</a>
@@ -31,8 +32,10 @@
     <section class="hero">
       <div class="container">
         <img class="app-icon" src="assets/icon.png" alt="Phlox app icon" />
-        <h1>Orchestrate your<br />AI coding agents.</h1>
-        <p class="sub">Phlox runs Codex, Cursor, and Claude Code side by side in one native macOS cockpit. Spawn sessions, delegate tasks, and gather the results — all from a single window.</p>
+        <h1>Ask one agent.<br />It runs the rest.</h1>
+        <p class="sub">Give one agent the job. From there, agents manage agents.<br />
+          Opening window after window, starting each one by hand, copy-pasting between them —<br />
+          not anymore.</p>
         <div class="cta">
           <a class="btn-primary" href="https://github.com/HMNZK/phlox-dist/releases/latest/download/Phlox.dmg">Download for macOS</a>
         </div>
@@ -42,23 +45,47 @@
 
     <section class="container shot">
       <div class="shot-frame">
-        <img src="assets/screenshot.webp" alt="Phlox running Claude Code, Codex, and Cursor agents in parallel" />
+        <img src="assets/screenshot.webp" alt="Phlox running several AI agents at once in one window" />
+      </div>
+    </section>
+
+    <section class="problem" id="why">
+      <div class="container">
+        <div class="head">
+          <span class="eyebrow">Before and after.</span>
+          <h2>The days of managing it all yourself are over.</h2>
+          <p class="lead">The more AIs you use, the more there is to launch, hand off, and watch. Phlox hands all of it to an AI.</p>
+        </div>
+        <div class="pains">
+          <article class="pain">
+            <div class="row bad"><span class="ic">×</span><span>Opening window after window, starting each AI by hand, passing output around by copy and paste.</span></div>
+            <div class="row good"><span class="ic">✓</span><span>Ask one, and it calls in the other AIs and manages the rest.</span></div>
+          </article>
+          <article class="pain">
+            <div class="row bad"><span class="ic">×</span><span>No idea which AI is working and which one is waiting.</span></div>
+            <div class="row good"><span class="ic">✓</span><span>Every status at a glance.<br />A heads-up the moment you're needed.</span></div>
+          </article>
+          <article class="pain">
+            <div class="row bad"><span class="ic">×</span><span>Watching the screen just to catch when something finishes.</span></div>
+            <div class="row good"><span class="ic">✓</span><span>The AI watches for you.<br />You move on to something else.</span></div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="features" id="features">
       <div class="container">
         <div class="head">
-          <span class="eyebrow">Features</span>
-          <h2>Real orchestration, not copy-paste.</h2>
-          <p class="lead">One native cockpit for every coding agent on your Mac — spawn them, watch them, and let them work together.</p>
+          <span class="eyebrow">What you can do</span>
+          <h2>Agents that manage agents.</h2>
+          <p class="lead">All you do is supervise.</p>
         </div>
 
         <div class="bento">
           <article class="feat feat-a">
-            <span class="k">01 — Parallel</span>
-            <h3>One window, every agent</h3>
-            <p>Codex, Cursor, and Claude Code each run in their own live terminal pane — side by side, in parallel. No tab-juggling, no context lost between apps.</p>
+            <span class="k">01 — Agents calling agents</span>
+            <h3>Ask just one</h3>
+            <p>This is what makes Phlox different. Hand a task to one AI and it calls in the other AIs it needs, gives them instructions, waits for them to finish, and clears them away when they're done. No launching window after window, no passing output around by hand.</p>
             <div class="panes">
               <span class="pane"><span class="dot run"></span>Claude Code</span>
               <span class="pane"><span class="dot wait"></span>Codex</span>
@@ -67,9 +94,9 @@
           </article>
 
           <article class="feat feat-usage">
-            <span class="k">Live</span>
-            <h3>Usage at a glance</h3>
-            <p>Every agent's quota in the Inspector — across 5-hour, weekly, and total limits.</p>
+            <span class="k">Live — Usage left</span>
+            <h3>How much is left</h3>
+            <p>Each AI's usage in the side panel — across 5-hour, weekly, and total limits. See what's left at a glance.</p>
             <div class="usage">
               <div class="ubar"><div class="ul"><span>Claude Code · 5h</span><b>51%</b></div><div class="track"><div class="fill" style="--w:51%"></div></div></div>
               <div class="ubar"><div class="ul"><span>Codex · weekly</span><b>63%</b></div><div class="track"><div class="fill" style="--w:63%"></div></div></div>
@@ -78,28 +105,57 @@
           </article>
 
           <article class="feat feat-c">
-            <span class="k">02 — Delegate</span>
-            <h3>Delegate and wait</h3>
-            <p>Spawn a session, send the brief, and let it run. Completion is detected automatically via Stop hooks — then you integrate the result.</p>
+            <span class="k">02 — One window</span>
+            <h3>Every AI, right here</h3>
+            <p>Claude Code, Codex, and Cursor each run in their own pane at the same time. No tab-juggling, no losing track of what's doing what.</p>
           </article>
 
           <article class="feat feat-d">
-            <span class="k">03 — Handoff</span>
-            <h3>Agents that talk</h3>
-            <p>Built-in messaging lets sessions hand off work and share context, so a fleet of agents collaborates on one task.</p>
+            <span class="k">03 — Delegate</span>
+            <h3>Ask, then just wait</h3>
+            <p>Just say what you want done. The AI takes it from there, and completion is detected automatically — so you can move on.</p>
           </article>
 
           <article class="feat feat-e">
             <span class="k">04 — Status</span>
-            <h3>Status you can trust</h3>
-            <p>Running, idle, or waiting for input — detected automatically, including Codex prompt-waits — with notifications and plan-approval prompts so nothing stalls unseen.</p>
+            <h3>Always know what's happening</h3>
+            <p>Working, idle, or waiting for input — even when an agent is stuck on a question, it's detected automatically, with a notification the moment you're needed. Nothing stalls unseen.</p>
           </article>
 
           <article class="feat feat-f">
-            <span class="k">05 — Layout</span>
-            <h3>Workspaces &amp; layouts</h3>
-            <p>Group sessions by workspace, filter the grid, switch view modes (⌃⌘G), and toggle the sidebar (⌘B). Your cockpit, your way.</p>
+            <span class="k">05 — Make it yours</span>
+            <h3>The view, your way</h3>
+            <p>Group by project, filter which AIs you see, switch view modes (⌃⌘G), and toggle the sidebar (⌘B). Arrange it however works for you.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="start" id="start">
+      <div class="container">
+        <div class="head">
+          <span class="eyebrow">Getting started</span>
+          <h2>Three steps. That's it.</h2>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span class="n">1</span>
+            <h3>Download and open</h3>
+            <p>Grab the macOS app, drop it in Applications, and launch. Signed and notarized — no scary warnings.</p>
+          </article>
+          <article class="step">
+            <span class="n">2</span>
+            <h3>Call up an AI</h3>
+            <p>Pick Claude Code, Codex, or Cursor and start it.</p>
+          </article>
+          <article class="step">
+            <span class="n">3</span>
+            <h3>Say what you want</h3>
+            <p>From there, that AI calls in the others it needs and runs with it. You'll get a notification when it's done.</p>
+          </article>
+        </div>
+        <div class="cta">
+          <a class="btn-primary" href="https://github.com/HMNZK/phlox-dist/releases/latest/download/Phlox.dmg">Download for macOS</a>
         </div>
       </div>
     </section>
