@@ -3,6 +3,21 @@
     <channel>
         <title>Phlox</title>
         <item>
+            <title>0.5.0</title>
+            <pubDate>Thu, 11 Jun 2026 20:38:54 +0900</pubDate>
+            <sparkle:version>8</sparkle:version>
+            <sparkle:shortVersionString>0.5.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://github.com/HMNZK/phlox-dist/releases/download/updates/Phlox-0.5.0.zip" length="5283012" type="application/octet-stream" sparkle:edSignature="KHQWifcIP7+VQtz810wKnitxthAsCOi27q+2r7Hs7yR5mjFrLqt4m1U05QJeJY6kjrpXt3K2A8Le4xqGAO4zDQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://github.com/HMNZK/phlox-dist/releases/download/updates/Phlox8-7.delta" sparkle:deltaFrom="7" length="286614" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="rx1sAF6/7QrAZAqj/0RKV7rSsBi4T9ty+W0MRXBPhuBEPWuwWQrO/JFZRS8t04PjEMvqlMtquE6aEkfNbrujAA=="/>
+                <enclosure url="https://github.com/HMNZK/phlox-dist/releases/download/updates/Phlox8-5.delta" sparkle:deltaFrom="5" length="899122" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="uN126sKP/gSN4/M4HfPXcuCCS4MM4qQ0xMC/gin2bv9TzyXJ8VHneedBo0aifCguaUMpHt1CHHNl/1DAgYHcDg=="/>
+                <enclosure url="https://github.com/HMNZK/phlox-dist/releases/download/updates/Phlox8-4.delta" sparkle:deltaFrom="4" length="911418" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="6lVqCXv5UIq7+fZjJY6+0BePe1Hl195qnrMJx4xSbQHg8SqCsEz+SFeX/XpHUnsEkq9kdcvSOR3AGLmOVoBLAQ=="/>
+                <enclosure url="https://github.com/HMNZK/phlox-dist/releases/download/updates/Phlox8-3.delta" sparkle:deltaFrom="3" length="1072170" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="blLBXvBgDRlk0VAa3GfGWrX+oMcZasauVI4YFuHVJdeFm40dDVuqwZ9+gMU55gvfZ6gNy5rhh7KjpUVJehQTAg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.4.0</title>
             <pubDate>Thu, 11 Jun 2026 18:49:51 +0900</pubDate>
             <sparkle:version>7</sparkle:version>
@@ -27,18 +42,6 @@
             <sparkle:deltas>
                 <enclosure url="https://github.com/HMNZK/phlox-dist/releases/download/updates/Phlox5-4.delta" sparkle:deltaFrom="4" length="353526" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="kJdwYMcSAzhCDCDadvJ7tJvzUyefVFyA0rGH4d+Q1VMXEgPOfjsmfemARPEjyiffkEiBqWuBgV03b1+Wz+fKDg=="/>
                 <enclosure url="https://github.com/HMNZK/phlox-dist/releases/download/updates/Phlox5-3.delta" sparkle:deltaFrom="3" length="691090" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="nWWXh3HAMzgsPSToYu402jCMQ2ZdhCrEqbT3qIBOzPvQjueJiO0FwmQZQ6zcm26hGARXFMNA7oBJATidP7ShBA=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.2.0</title>
-            <pubDate>Tue, 09 Jun 2026 20:57:18 +0900</pubDate>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/HMNZK/phlox-dist/releases/download/updates/Phlox-0.2.0.zip" length="4947499" type="application/octet-stream" sparkle:edSignature="1wWiUxE9jNC09Fs4sZ0Hqc2R4Z6YzzRIrgQV0cwXr/cOTY/5QiuOV0AdaVpJ+FfPOX1vd4ub1RI6Ueote5uVDQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://github.com/HMNZK/phlox-dist/releases/download/updates/Phlox4-3.delta" sparkle:deltaFrom="3" length="649298" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="39f21MvnpUgQQb/EXlnVXA3F3LS+8j2WTuCNp5mutVrOomiTKjyNweeffbn0mbKNnnqBWxY9S3+CKbIRMborBQ=="/>
             </sparkle:deltas>
         </item>
     </channel>
