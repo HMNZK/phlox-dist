@@ -29,9 +29,31 @@
   <link rel="alternate" hreflang="ja" href="https://phlox.cc/ja/" />
   <link rel="alternate" hreflang="x-default" href="https://phlox.cc/" />
   <link rel="icon" href="assets/icon.png" />
+  <link rel="preload" as="image" href="assets/screenshot.webp" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cine.css" />
 </head>
 <body>
+  <!-- Cinematic experience: a pinned scroll-scrubbed composition.
+       Shown only once app.js has mounted (html.cine-on); otherwise the
+       full static page below is served (SEO + no-JS + load-failure safe). -->
+  <div id="cine" aria-hidden="true">
+    <nav id="cine-nav">
+      <a class="brand" href="/"><img src="assets/icon.png" alt="Phlox" />Phlox</a>
+      <div class="nav-right">
+        <a href="#features" data-seek="0.6">What you can do</a>
+        <a href="#start" data-seek="0.9">Get started</a>
+        <a class="cine-dl" href="https://github.com/HMNZK/phlox-dist/releases/latest/download/Phlox.dmg">Download</a>
+        <span class="lang"><a href="/" class="active">EN</a><a href="/ja/">日本語</a></span>
+      </div>
+    </nav>
+    <div id="cine-stick"><div id="cine-root"></div></div>
+    <div id="cine-cue"><span class="mouse"></span><span>Scroll</span></div>
+    <button type="button" id="skip-btn">Skip animation</button>
+  </div>
+
+  <!-- Static fallback = the real, indexable page. Hidden when cine is on. -->
+  <div id="fallback">
   <header>
     <div class="container nav">
       <a class="brand" href="/"><img src="assets/icon.png" alt="Phlox" />Phlox</a>
@@ -52,8 +74,8 @@
         <img class="app-icon" src="assets/icon.png" alt="Phlox app icon" />
         <h1>Ask one agent.<br />It runs the rest.</h1>
         <p class="sub">Give one agent the job. From there, agents manage agents.<br />
-          Opening window after window, starting each one by hand, copy-pasting between them —<br />
-          not anymore.</p>
+          Opening window after window, starting each one by hand,<br />
+          copy-pasting between them — not anymore.</p>
         <div class="cta">
           <a class="btn-primary" href="https://github.com/HMNZK/phlox-dist/releases/latest/download/Phlox.dmg">Download for macOS</a>
         </div>
@@ -179,28 +201,14 @@
     </section>
   </main>
 
-  <script>
-    document.documentElement.classList.add('js');
-    (function () {
-      var els = document.querySelectorAll('.feat');
-      if (!('IntersectionObserver' in window)) {
-        els.forEach(function (e) { e.classList.add('in'); });
-        return;
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
-        });
-      }, { threshold: 0.18 });
-      els.forEach(function (e) { io.observe(e); });
-    })();
-  </script>
-
   <footer>
     <div class="container foot">
       <span>© 2026 Phlox</span>
       <span><a href="/privacy">Privacy Policy</a></span>
     </div>
   </footer>
+  </div><!-- /#fallback -->
+
+  <script type="module" src="app.js"></script>
 </body>
 </html>

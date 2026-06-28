@@ -14,9 +14,27 @@
   <link rel="alternate" hreflang="ja" href="https://phlox.cc/ja/" />
   <link rel="alternate" hreflang="x-default" href="https://phlox.cc/" />
   <link rel="icon" href="../assets/icon.png" />
+  <link rel="preload" as="image" href="../assets/screenshot.webp" />
   <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../cine.css" />
 </head>
 <body>
+  <div id="cine" aria-hidden="true">
+    <nav id="cine-nav">
+      <a class="brand" href="/ja/"><img src="../assets/icon.png" alt="Phlox" />Phlox</a>
+      <div class="nav-right">
+        <a href="#features" data-seek="0.6">できること</a>
+        <a href="#start" data-seek="0.9">はじめ方</a>
+        <a class="cine-dl" href="https://github.com/HMNZK/phlox-dist/releases/latest/download/Phlox.dmg">ダウンロード</a>
+        <span class="lang"><a href="/">EN</a><a href="/ja/" class="active">日本語</a></span>
+      </div>
+    </nav>
+    <div id="cine-stick"><div id="cine-root"></div></div>
+    <div id="cine-cue"><span class="mouse"></span><span>Scroll</span></div>
+    <button type="button" id="skip-btn">アニメをスキップ</button>
+  </div>
+
+  <div id="fallback">
   <header>
     <div class="container nav">
       <a class="brand" href="/ja/"><img src="../assets/icon.png" alt="Phlox" />Phlox</a>
@@ -164,28 +182,14 @@
     </section>
   </main>
 
-  <script>
-    document.documentElement.classList.add('js');
-    (function () {
-      var els = document.querySelectorAll('.feat');
-      if (!('IntersectionObserver' in window)) {
-        els.forEach(function (e) { e.classList.add('in'); });
-        return;
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
-        });
-      }, { threshold: 0.18 });
-      els.forEach(function (e) { io.observe(e); });
-    })();
-  </script>
-
   <footer>
     <div class="container foot">
       <span>© 2026 Phlox</span>
       <span><a href="/ja/privacy">プライバシーポリシー</a></span>
     </div>
   </footer>
+  </div><!-- /#fallback -->
+
+  <script type="module" src="../app.js"></script>
 </body>
 </html>
